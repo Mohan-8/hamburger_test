@@ -6,6 +6,7 @@ body {
     transition: margin-left 0.3s;
 }
 
+/* Sidebar Styling */
 .sidebar {
     width: 250px;
     position: fixed;
@@ -16,8 +17,10 @@ body {
     color: white;
     transition: left 0.3s;
     padding-top: 60px;
+    z-index: 1000;
 }
 
+/* Sidebar Links */
 .sidebar a {
     padding: 15px;
     display: flex;
@@ -43,6 +46,7 @@ body {
     margin-left: 37px;
 }
 
+/* Menu Button */
 .menu-btn {
     font-size: 30px;
     cursor: pointer;
@@ -50,13 +54,44 @@ body {
     left: 10px;
     top: 10px;
     color: #222;
+    z-index: 1001;
 }
 
+/* Content */
 .content {
     margin-left: 20px;
     padding: 20px;
 }
 
+/* Open Sidebar */
 .open {
     left: 0;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* Full screen for mobile */
+        left: -100%;
+    }
+    
+    .open {
+        left: 0;
+    }
+
+    .menu-btn {
+        font-size: 35px;
+        left: 15px;
+        top: 15px;
+    }
+
+    .sidebar a {
+        font-size: 20px;
+        padding: 20px;
+    }
+
+    .menu-text {
+        font-size: 16px;
+        margin-left: 50px;
+    }
 }

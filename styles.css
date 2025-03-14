@@ -58,10 +58,18 @@ body {
 }
 
 /* Content */
+/* Content - Centered on Screen */
 .content {
-    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    margin-left: 0;
     padding: 20px;
 }
+
 
 /* Open Sidebar */
 .open {

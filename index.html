@@ -4,86 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hamburger Sidebar</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-            background: #f4f4f4;
-        }
-        .sidebar {
-            height: 100vh;
-            width: 300px;
-            position: fixed;
-            top: 0;
-            left: -300px;
-            background: #222;
-            color: white;
-            transition: left 0.3s;
-            padding-top: 60px;
-            box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
-        }
-        .sidebar a {
-            padding: 15px 25px;
-            display: flex;
-            align-items: center;
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            border-bottom: 1px solid #333;
-        }
-        .sidebar a:hover {
-            background: #575757;
-        }
-        .menu-btn {
-            font-size: 30px;
-            cursor: pointer;
-            position: fixed;
-            top: 15px;
-            left: 15px;
-            background: none;
-            border: none;
-            color: white;
-            background: #222;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        .menu-text {
-            margin-left: 10px;
-        }
-        .content {
-            padding: 20px;
-            margin-left: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <button class="menu-btn" onclick="toggleSidebar()">&#9776;</button>
+
+    <!-- Menu Button -->
+    <span class="menu-btn" onclick="toggleMenu()">&#9776;</span>
+
+    <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
-        <a href="#"><span class="menu-text">🏠 Home - Welcome to our website</span></a>
-        <a href="#"><span class="menu-text">ℹ️ About - Learn more about us</span></a>
-        <a href="#"><span class="menu-text">🛠 Services - What we offer</span></a>
-        <a href="#"><span class="menu-text">📞 Contact - Get in touch</span></a>
-        <a href="#"><span class="menu-text">📜 Blog - Read our latest articles</span></a>
-        <a href="#"><span class="menu-text">⚙ Settings - Customize your experience</span></a>
-        <a href="#"><span class="menu-text">🔒 Logout - Sign out securely</span></a>
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <p class="menu-text">This is the homepage</p>
+
+        <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+        <p class="menu-text">Your personal profile</p>
+
+        <a href="settings.html"><i class="fas fa-cogs"></i> Settings</a>
+        <p class="menu-text">Change your preferences</p>
+
+        <a href="notifications.html"><i class="fas fa-bell"></i> Notifications</a>
+        <p class="menu-text">View recent alerts</p>
+
+        <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+        <p class="menu-text">Learn about us</p>
     </div>
 
+    <!-- Page Content -->
     <div class="content">
-        <h1>Welcome to Our Website</h1>
-        <p>Click the menu button to explore.</p>
+        <h1>🏠 Home Page</h1>
+        <p>Welcome to the home page. Click the menu to navigate.</p>
     </div>
 
-    <script>
-        function toggleSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            if (sidebar.style.left === '-300px') {
-                sidebar.style.left = '0';
-            } else {
-                sidebar.style.left = '-300px';
-            }
-        }
-    </script>
+    <script src="script.js"></script>
+
 </body>
 </html>
